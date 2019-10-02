@@ -24,7 +24,7 @@
 Управление АКБ
 ----------------------
 
-.. figure:: _static/_images/akb_ind.png
+.. figure:: _static/_images/akb_ind.PNG
    :align: center
    :width: 600
 
@@ -78,7 +78,7 @@
 Зарядное устройство
 ---------------------
 
-.. figure:: _static/_images/charger.png
+.. figure:: _static/_images/charger.PNG
    :align: center
    :width: 600
 
@@ -89,7 +89,7 @@
 
 Конструкция зарядного устройства позволяет установить в него одновременно две АКБ, однако заряжаться батареи будут последовательно. Сначала будет заряжаться та батарея, для зарядки которой требуется меньше времени (имеющая при установке в зарядное устройство больший остаточный заряд). 
 
-.. figure:: _static/_images/akb_charge.png
+.. figure:: _static/_images/akb_charge.PNG
    :align: center
    :width: 600
 
