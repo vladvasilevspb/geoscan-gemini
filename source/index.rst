@@ -260,12 +260,13 @@ _`службу технической поддержки`:: https://www.geoscan.
 
 
 
-.. Содержание::
+.. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Содержание:
+
    precautions
    charger
-   
+
 
 
 * :ref:`genindex`

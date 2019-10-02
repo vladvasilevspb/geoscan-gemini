@@ -20,13 +20,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Geoscan Gemini'
-copyright = '2019, Geoscan Group'
-author = 'Geoscan Group'
+copyright = '2019, Geoscan'
+author = 'Geoscan'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = ''
 
 
 # -- General configuration ---------------------------------------------------
@@ -39,6 +39,8 @@ release = '0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
     'sphinx.ext.githubpages',
 ]
 
@@ -75,13 +77,22 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
+
+def setup(app):
+    app.add_stylesheet('style.css')
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'logo_only': True,
+'collapse_navigation': False,
+}
+html_logo = "_static/_images/logo.png"
+html_favicon = "_static/_images/favicon.ico"
+html_show_sphinx = False
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -102,35 +113,49 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'GeoscanGeminidoc'
+htmlhelp_basename = 'Geoscan_Gemini_Manual'
 
-
+latex_logo  = "_static/_images/logo_latex.png"
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
-    # 'papersize': 'letterpaper',
+    'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
     #
-    # 'pointsize': '10pt',
+    'pointsize': '10pt',
 
     # Additional stuff for the LaTeX preamble.
     #
-    # 'preamble': '',
+    'preamble': '',
+
+    'extraclassoptions': 'openany',
 
     # Latex figure (float) alignment
     #
-    # 'figure_align': 'htbp',
+    'figure_align': 'H',
+    
+        'fontpkg': r'''
+
+''',
+    # Additional stuff for the LaTeX preamble.
+    'preamble': r"""
+    \usepackage{setspace}
+    \usepackage{fontspec}
+    \setmainfont[Ligatures=TeX]{Arial}
+    \setsansfont[Ligatures=TeX]{Arial}
+    """,
+
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'GeoscanGemini.tex', 'Geoscan Gemini Documentation',
-     'Geoscan Group', 'manual'),
+    (master_doc, 'Geoscan_Gemini_Manual.tex', '',
+     '', 'manual'),
 ]
 
 
@@ -139,7 +164,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'geoscangemini', 'Geoscan Gemini Documentation',
+    (master_doc, 'Geoscan_Gemini_Manual', 'Геоскан Gemini Руководство по эксплуатации',
      [author], 1)
 ]
 
@@ -150,8 +175,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'GeoscanGemini', 'Geoscan Gemini Documentation',
-     author, 'GeoscanGemini', 'One line description of project.',
+    (master_doc, 'Geoscan_Gemini_Manual', 'Геоскан Gemini Руководство по эксплуатации',
+     author, 'Geoscan_Gemini_Manual', 'One line description of project.',
      'Miscellaneous'),
 ]
 
