@@ -239,6 +239,8 @@
 
    precautions
    charger
+   launch
+   planner
 
 
 

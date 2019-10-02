@@ -90,7 +90,7 @@
 
 Укажите имя проекта, параметры съемки, модель БВС и фотоаппарата.
 
-.. figure:: _static/_images/planner6.png
+.. figure:: _static/_images/planner7.png
    :align: center
    :width: 500
 
