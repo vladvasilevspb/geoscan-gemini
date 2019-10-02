@@ -263,6 +263,9 @@ _`службу технической поддержки`:: https://www.geoscan.
 .. Содержание::
    :maxdepth: 2
    :caption: Contents:
+   precautions
+   charger
+   
 
 
 * :ref:`genindex`
