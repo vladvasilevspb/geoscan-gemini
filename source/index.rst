@@ -8,7 +8,7 @@
 
 
 .. image:: _static/_images/501.png
-   :width: 400
+   :width: 720
    :align: center
 
 Общие сведения
