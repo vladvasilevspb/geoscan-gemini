@@ -7,7 +7,7 @@
 ==========================================
 
 
-.. image:: _static/_images/501.png
+.. image:: _static/_images/501.PNG
    :width: 400
    :align: center
 
