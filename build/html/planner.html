@@ -1,0 +1,627 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Использование Geoscan Planner &mdash; Документация Geoscan Gemini </title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Запуск" href="launch.html" />
+    <link rel="prev" title="Зарядная станция и АКБ" href="charger.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="precautions.html">Правила безопасности</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="precautions.html#id2">Эксплуатационные ограничения</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="charger.html">Зарядная станция и АКБ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="charger.html#id2">Характеристики АКБ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charger.html#id3">Управление АКБ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charger.html#lipo">Правила эксплуатации литий-полимерной (LiPo) АКБ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charger.html#id4">Хранение и разряд</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charger.html#id6">Утилизация АКБ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charger.html#id7">Зарядное устройство</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charger.html#id8">Характеристики ЗУ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charger.html#id9">Правила эксплуатации ЗУ</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Использование Geoscan Planner</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Предварительная настройка</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Проектирование полетного задания</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Площадная аэрофотосъемка</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Добавление и удаление вершин полигона</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Изменение направления линий облета</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Изменение точки входа</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">Линейная аэрофотосъемка</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">Полет по точкам</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">Точка ожидания</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Точка посадки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">Предстартовая подготовка</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">Полет</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">Возврат</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">Посадка</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">Полет по требованию</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">Дистанционное управление</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="launch.html">Запуск</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch.html#id2">Порядок разборки БВС</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Geoscan Gemini</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Использование Geoscan Planner</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/planner.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geoscan-planner">
+<h1>Использование Geoscan Planner<a class="headerlink" href="#geoscan-planner" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="id1">
+<h2>Предварительная настройка<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li>Подключите модем КРЛ к USB порту ноутбука.</li>
+<li>Включите бортовое питание БВС.</li>
+<li>Запустите программу <strong>MdmDisp</strong>.</li>
+</ol>
+<p>В правом нижнем углу появится пиктограмма антенны и количество подключенных бортов.</p>
+<div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="_images/planner1.png"><img alt="_images/planner1.png" src="_images/planner1.png" style="width: 100px;" /></a>
+<p class="caption"><span class="caption-text">Индикатор работы программы MdmDisp</span></p>
+</div>
+<p>3.1 При первом подключении необходимо настроить соединение с БВС, запустив программу <strong>NetTopology</strong>:</p>
+<ul class="simple">
+<li>Нажмите на значок <strong>Поиск новых устройств</strong>.</li>
+</ul>
+<div class="figure align-center" id="id18">
+<a class="reference internal image-reference" href="_images/planner29.png"><img alt="_images/planner29.png" src="_images/planner29.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Значок поиска новых устройств</span></p>
+</div>
+<p>Программа отобразит список обнаруженных модемов.</p>
+<div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p class="last">Эфир сканируется до тех пор, пока кнопка <strong>Поиск новых устройств</strong> не будет нажата повторно.</p>
+</div>
+<ul class="simple">
+<li>Выберите появившийся Борт №xxx и нажмите на значок <strong>Добавить устройство</strong>.</li>
+</ul>
+<div class="figure align-center" id="id19">
+<a class="reference internal image-reference" href="_images/planner30.png"><img alt="_images/planner30.png" src="_images/planner30.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Значок добавления устройства</span></p>
+</div>
+<p>Программа сохраняет список добавленных устройств.</p>
+<p>При проведении повторных полетов достаточно запустить <strong>MdmDisp</strong> и убедиться, что подключение выполнено успешно.</p>
+<p>Если БВС не обнаружен, запустить поиск бортовых модемов, нажав на значок <strong>MdmDisp</strong> правой кнопкой мыши и выбрав <strong>Переподключить</strong>.</p>
+<div class="figure align-center" id="id20">
+<a class="reference internal image-reference" href="_images/planner2.png"><img alt="_images/planner2.png" src="_images/planner2.png" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Контекстное меню MdmDisp</span></p>
+</div>
+<ol class="arabic simple" start="4">
+<li>Запустите программу <strong>Geoscan Planner</strong>.</li>
+<li>В окне ввода логина и пароля введите свой логин и пароль пользователя продукта.</li>
+<li>Во вкладке <strong>Полет</strong> выберите <strong>Подключить БВС - Поиск…</strong>.*</li>
+</ol>
+<div class="figure align-center" id="id21">
+<a class="reference internal image-reference" href="_images/planner3.png"><img alt="_images/planner3.png" src="_images/planner3.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Подключение БВС</span></p>
+</div>
+<ol class="arabic simple" start="7">
+<li>Выбрать тип подключения <strong>MdmDisp</strong>. Задать <strong>IP-адрес</strong> <em>localhost</em>. В списке <strong>Борт</strong> установить для <strong>БВС - Порт 2</strong>.</li>
+</ol>
+<div class="figure align-center" id="id22">
+<a class="reference internal image-reference" href="_images/pl4.png"><img alt="_images/pl4.png" src="_images/pl4.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Окно подключения БВС</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p class="last">Параметры достаточно установить один раз. При последующих подключениях БВС воспользуйтесь кнопкой <strong>Подключить БВС</strong> панели инструментов. Приемник автоматически определит координаты и отобразит местоположение БВС на карте. В окне программы появятся панель телеметрии (слева) и панель приборов (справа).</p>
+</div>
+<div class="figure align-center" id="id23">
+<a class="reference internal image-reference" href="_images/pl5.png"><img alt="_images/pl5.png" src="_images/pl5.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Подключение БВС</span></p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Проектирование полетного задания<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li>Создайте <strong>Новый проект</strong>.</li>
+</ol>
+<div class="figure align-center" id="id24">
+<a class="reference internal image-reference" href="_images/planner5.png"><img alt="_images/planner5.png" src="_images/planner5.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Создание нового проекта</span></p>
+</div>
+<p>Укажите имя проекта, параметры съемки, модель БВС и фотоаппарата.</p>
+<div class="figure align-center" id="id25">
+<a class="reference internal image-reference" href="_images/planner7.png"><img alt="_images/planner7.png" src="_images/planner7.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Создание нового проекта полетного задания</span></p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Площадная аэрофотосъемка<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Площадная аэрофотосъемка – съемка полигонов. Полигон – это область, ограниченная многоугольником. Оператор задает вершины многоугольника (не менее 3), а программа автоматически рассчитывает маршрут обхода.</p>
+<ol class="arabic simple">
+<li>Нажмите на значок <strong>Создать площадную аэрофотосъемку</strong> панели инструментов.</li>
+</ol>
+<div class="figure align-center" id="id26">
+<a class="reference internal image-reference" href="_images/planner8.png"><img alt="_images/planner8.png" src="_images/planner8.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Создание площадной аэрофотосъемки</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Щелчками кнопки мыши задайте на карте угловые точки исследуемого участка местности. Программа автоматически рассчитает маршрут обхода полигона.</li>
+</ol>
+<div class="figure align-center" id="id27">
+<a class="reference internal image-reference" href="_images/planner9.png"><img alt="_images/planner9.png" src="_images/planner9.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">Пример построения площадной аэрофотосъемки</span></p>
+</div>
+<div class="section" id="id4">
+<h3>Добавление и удаление вершин полигона<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<p>В готовый полигон можно добавлять вершины.</p>
+<ol class="arabic simple">
+<li>С зажатой левой кнопкой мыши переместите среднюю точку стороны полигона.</li>
+</ol>
+<div class="figure align-center" id="id28">
+<a class="reference internal image-reference" href="_images/planner10.png"><img alt="_images/planner10.png" src="_images/planner10.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">Добавление вершины</span></p>
+</div>
+<p>Вершина будет создана автоматически.
+В плавающем окне рядом с вершиной отобразятся ее координаты.</p>
+<div class="figure align-center" id="id29">
+<a class="reference internal image-reference" href="_images/planner45.png"><img alt="_images/planner45.png" src="_images/planner45.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">Результат добавления вершины</span></p>
+</div>
+<p>Для удаления вершины:</p>
+<ol class="arabic simple">
+<li>нажмите на вершину правой кнопкой мыши;</li>
+<li>в контекстном меню выберите <strong>Удалить вершину</strong>.</li>
+</ol>
+<div class="figure align-center" id="id30">
+<a class="reference internal image-reference" href="_images/planner44.png"><img alt="_images/planner44.png" src="_images/planner44.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Удаление вершины</span></p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Изменение направления линий облета<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Необходимость оптимизировать полигон «по направлению» возникает, например, если на месте проведения работ сила и направление ветра неблагоприятны (сильный ветер вдоль линий облета полигона).
+Для изменения типа оптимизации щелкните правой кнопкой мыши на полигоне и выберите в контекстном меню вариант <strong>Оптимизация «направление»</strong>.</p>
+<div class="figure align-center" id="id31">
+<a class="reference internal image-reference" href="_images/planner11.png"><img alt="_images/planner11.png" src="_images/planner11.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Оптимизация по направлению</span></p>
+</div>
+<p>Одна из вершин полигона будет подсвечена. На ней появится бегунок для задания направления.</p>
+<div class="figure align-center" id="id32">
+<a class="reference internal image-reference" href="_images/planner12.png"><img alt="_images/planner12.png" src="_images/planner12.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Корректировка направления облета</span></p>
+</div>
+<p>В результате будет построен новый маршрут облета полигона по заданному направлению.</p>
+<div class="figure align-center" id="id33">
+<a class="reference internal image-reference" href="_images/planner13.png"><img alt="_images/planner13.png" src="_images/planner13.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Новый маршрут облета</span></p>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Изменение точки входа<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Если необходимо сменить точку входа в полигон, то выполните следующие действия:</p>
+<ol class="arabic simple">
+<li>Выделите полигон.</li>
+</ol>
+<div class="figure align-center" id="id34">
+<a class="reference internal image-reference" href="_images/planner14.png"><img alt="_images/planner14.png" src="_images/planner14.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Выделенный полигон</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Правой кнопкой мыши выделите точку, в которой нужно осуществить вход.</li>
+<li>В появившемся контекстном меню выберите <strong>Начать здесь</strong>.</li>
+</ol>
+<div class="figure align-center" id="id35">
+<a class="reference internal image-reference" href="_images/planner15.png"><img alt="_images/planner15.png" src="_images/planner15.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Изменение точки входа в полигон</span></p>
+</div>
+<p>У выбранной точки входа появится флажок <a class="reference internal" href="_static/_images/flag.png"><img alt="flag" src="_static/_images/flag.png" style="width: 50px;" /></a></p>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>Линейная аэрофотосъемка<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Команда <strong>Создать линейную аэрофотосъемку</strong> служит для облета линейных протяженных объектов, таких как: реки, дороги, нефтепроводы и т.п..</p>
+<ol class="arabic simple">
+<li>Нажмите на значок <strong>Создать линейную аэрофотосъемку</strong> панели инструментов.</li>
+</ol>
+<div class="figure align-center" id="id36">
+<a class="reference internal image-reference" href="_images/planner16.png"><img alt="_images/planner16.png" src="_images/planner16.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Создание области линейной аэрофотосъемки</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Однократными щелчками задайте маршрут обхода протяженного объекта по точкам разворотов. Программа автоматически построит линии облета.</li>
+</ol>
+<div class="figure align-center" id="id37">
+<a class="reference internal image-reference" href="_images/planner17.png"><img alt="_images/planner17.png" src="_images/planner17.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Пример линейной аэрофотосъемки</span></p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Полет по точкам<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Команда <strong>Создать полет по точкам</strong> может использоваться для обследования территорий или облета высотных объектов.</p>
+<ol class="arabic simple">
+<li>Нажмите на значок <strong>Создать полет по точкам</strong> на панели инструментов.</li>
+</ol>
+<div class="figure align-center" id="id38">
+<a class="reference internal image-reference" href="_images/planner31.png"><img alt="_images/planner31.png" src="_images/planner31.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Значок создания полета по точкам</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Однократными щелчками задайте маршрут полета по точкам.</li>
+</ol>
+<div class="figure align-center" id="id39">
+<a class="reference internal image-reference" href="_images/planner32.png"><img alt="_images/planner32.png" src="_images/planner32.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Задание маршрута полета по точкам</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p class="last">По умолчанию фотографирование во время полета по точкам не осуществляется. При необходимости настройте <strong>Режим фотографирования</strong> в панели <strong>Свойства</strong>.</p>
+</div>
+<ul class="simple">
+<li>Щелчком правой кнопки мыши по точке вы можете задать время «зависания» БВС. Выберите <strong>Задать задержку в точке</strong> и укажите время в секундах.</li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h2>Точка ожидания<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Команда <strong>Создать точку ожидания</strong> служит для удержания БВС в точке на высоте заданное время.</p>
+<ol class="arabic simple">
+<li>Нажмите на значок <strong>Создать точку ожидания</strong> на панели инструментов.</li>
+</ol>
+<div class="figure align-center" id="id40">
+<a class="reference internal image-reference" href="_images/planner22.png"><img alt="_images/planner22.png" src="_images/planner22.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Значок создания точки ожидания</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Щелчком мыши на карте задайте точку, в которой должно осуществляться ожидание.</li>
+</ol>
+<div class="figure align-center" id="id41">
+<a class="reference internal image-reference" href="_images/planner24.png"><img alt="_images/planner24.png" src="_images/planner24.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Точка ожидания на карте</span></p>
+</div>
+<p>БВС будет на заданной высоте «удерживать» точку в течение указанного времени, после чего отправится по запланированному маршруту.</p>
+<p>В экспертном режиме (см. полное руководство Geoscan Planner) можно изменить свойства: задать высоту точки ожидания, длительность ожидания, направление движения и активировать функции измерения ветра и бесконечного ожидания.</p>
+<p>При активации варианта <strong>Измерение ветра</strong>. При этом точка ожидания окрасится в желтый цвет, а длительность измениться на 15с. Квадрокоптер, учитывая измеренные данные о ветре, будет плавнее идти по маршруту полетного задания.</p>
+<p>Функция бесконечного ожидания служит для постоянного удержания точки (пока не сработает отказ по низкому заряду АКБ, приводящий к автоматическому возврату). При этом цвет точки ожидания изменится на темно-синий.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Внимание</p>
+<p class="last">Рекомендуется устанавливать точку ожидания с измерением ветра перед каждым полетным элементом на высоте полетного элемента. Если элементы полетного задания находятся на значительном удалении, рекомендуется дополнительно провести измерение ветра рядом с этим полетным элементом.</p>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Внимание</p>
+<p class="last">Комплексы Геоскан не являются сертифицированными приборами измерения ветра, поэтому не могут быть использованы в качестве надежных источников данных о состоянии окружающей среды.</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Точка посадки<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Команда <strong>Создать точку посадки</strong> служит для указания места приземления БВС.</p>
+<p>При отсутствии заданной точки посадки БВС по окончанию полетного задания вернется в точку старта.</p>
+<ol class="arabic simple">
+<li>Нажмите на значок <strong>Создать точку посадки</strong> на панели инструментов.</li>
+</ol>
+<div class="figure align-center" id="id42">
+<a class="reference internal image-reference" href="_images/planner34.png"><img alt="_images/planner34.png" src="_images/planner34.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Значок создания точки посадки</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Щелчком мыши укажите точку приземления БВС.</li>
+</ol>
+</div>
+<div class="section" id="id11">
+<h2>Предстартовая подготовка<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li>Запустите <strong>Мастер предстартовой подготовки</strong>.</li>
+</ol>
+<div class="figure align-center" id="id43">
+<a class="reference internal image-reference" href="_images/planner26.png"><img alt="_images/planner26.png" src="_images/planner26.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Запуск мастера предстартовой подготовки</span></p>
+</div>
+<p>Следуйте указаниям мастера предстартовой подготовки (большинство проверок выполняются автоматически).
+Задайте время автономного полета (время, в течение которого осуществляется полет независимо от наличия связи между НСУ и БВС) и высоту возврата после выполнения полетного задания или окончания времения автономного полета.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Внимание</p>
+<p class="last">Высота возврата должна быть такой, чтобы гарантировать отсутствие препятствий.</p>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>Полет<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h2>
+<ol class="arabic simple">
+<li>Нажмите на значок <strong>Старт</strong>.</li>
+</ol>
+<div class="figure align-center" id="id44">
+<a class="reference internal image-reference" href="_images/planner27.png"><img alt="_images/planner27.png" src="_images/planner27.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Значок старта</span></p>
+</div>
+<p>Убедитесь, что ничего не мешает вращению лопастей и подтвердите запуск двигателей.</p>
+<div class="figure align-center" id="id45">
+<a class="reference internal image-reference" href="_images/planner35.png"><img alt="_images/planner35.png" src="_images/planner35.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Подтверждение запуска двигателей</span></p>
+</div>
+<p>Автопилот проверит работу двигателей. На экране НСУ появится окно подтверждения взлета.</p>
+<div class="figure align-center" id="id46">
+<a class="reference internal image-reference" href="_images/planner36.png"><img alt="_images/planner36.png" src="_images/planner36.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Подтверждение взлета</span></p>
+</div>
+<p>БВС осуществит взлет.</p>
+<div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p class="last">БВС выполняет полет в автоматическом режиме, однако это не освобождает оператора от обязанностей по наблюдению за процессом полета. Постоянное наличие связи по радиолинии не является необходимым для успешного выполнения задания.</p>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>Возврат<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Команда <strong>Возврат</strong> отправляет борт к стартовой точке. Достигнув положения напротив стартовой точки на высоте, БВС выполняет посадку.</p>
+<ol class="arabic simple">
+<li>Нажмите на значок <strong>Возврат</strong>.</li>
+</ol>
+<div class="figure align-center" id="id47">
+<a class="reference internal image-reference" href="_images/planner37.png"><img alt="_images/planner37.png" src="_images/planner37.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Значок возврата БВС</span></p>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>Посадка<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Команда <strong>Посадка</strong> служит для выполнения снижения и немедленной посадки.</p>
+<ol class="arabic simple">
+<li>Нажмите на значок <strong>Посадка</strong>.</li>
+</ol>
+<div class="figure align-center" id="id48">
+<a class="reference internal image-reference" href="_images/planner38.png"><img alt="_images/planner38.png" src="_images/planner38.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Значок посадки БВС</span></p>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Внимание</p>
+<p class="last">Автоматическое замедление при посадке срабатывает по барометрической высоте. Не рекомендуется указывать точку посадки в месте, сильно отличающемся по высоте рельефа от места взлета.</p>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>Полет по требованию<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Команда <strong>Полет по требованию</strong> позволяет отправить БВС на указанную точку на карте (с указанием высоты).
+По достижении указанной точки БВС начнет удержание данной точки, пока оператор не вмешается в выполнение полетного задания, либо пока не сработает автоматический возврат по отсечке батареи.</p>
+<ol class="arabic simple">
+<li>Нажмите на значок <strong>Полет по требованию</strong>.</li>
+</ol>
+<div class="figure align-center" id="id49">
+<a class="reference internal image-reference" href="_images/planner39.png"><img alt="_images/planner39.png" src="_images/planner39.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Значок полета по требованию</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Укажите точку на карте и задайте высоту полета над землей (Превышение).</li>
+</ol>
+<div class="figure align-center" id="id50">
+<a class="reference internal image-reference" href="_images/planner40.png"><img alt="_images/planner40.png" src="_images/planner40.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Задание высоты полета по требованию</span></p>
+</div>
+<p>По достижении точки БВС будет удерживать указанные координаты.</p>
+<div class="figure align-center" id="id51">
+<a class="reference internal image-reference" href="_images/planner41.png"><img alt="_images/planner41.png" src="_images/planner41.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Пример полета по требованию</span></p>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>Дистанционное управление<a class="headerlink" href="#id16" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Активация режима дистанционного управления возможна после прохождения предстартовой подготовки и взлета.</p>
+<ol class="arabic simple">
+<li>Нажмите на Значок <strong>Дистанционное управление</strong>.</li>
+</ol>
+<div class="figure align-center" id="id52">
+<a class="reference internal image-reference" href="_images/planner42.png"><img alt="_images/planner42.png" src="_images/planner42.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Значок дистанционного управления</span></p>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Внимание</p>
+<p class="last">При активации ручного режима БВС прервет выполнение задания по площадной или линейной АФС. После отключения ручного режима выполнение будет продолжено.</p>
+</div>
+<p>Будет осуществлен переход в ручной режим управления.</p>
+<p>По умолчанию дистанционное управление осуществляется через <strong>Управление скоростями</strong>. В таком случае выполняется векторный контроль отклонений кнопками в окне
+дистанционного управления или клавиш:</p>
+<div class="figure align-right" id="id53">
+<a class="reference internal image-reference" href="_images/planner43.png"><img alt="_images/planner43.png" src="_images/planner43.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Окно дистанционного управления</span></p>
+</div>
+<ul class="simple">
+<li><strong>W</strong> – полет прямо по курсу (вперед)</li>
+<li><strong>A</strong> — изменить направление полета в левую сторону (влево)</li>
+<li><strong>S</strong> — полет в обратную сторону относительно курса (назад)</li>
+<li><strong>D</strong> — изменить направление полета в правую сторону (вправо)</li>
+<li><strong>T</strong> — набор высоты (вверх)</li>
+<li><strong>G</strong> — снижение (вниз)</li>
+<li><strong>[</strong> – изменить курс в левую сторону (вращение влево)</li>
+<li><strong>]</strong> – изменить в правую сторону (вращение вправо)</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="launch.html" class="btn btn-neutral float-right" title="Запуск" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="charger.html" class="btn btn-neutral" title="Зарядная станция и АКБ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Geoscan
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
