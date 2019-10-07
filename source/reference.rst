@@ -1,18 +1,13 @@
-.. Geoscan Gemini documentation master file, created by
-   sphinx-quickstart on Tue Oct  1 12:10:10 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Руководство пользователя Геоскан Gemini
-==========================================
+Общие сведения
+===============
 
 
 .. image:: _static/_images/501.png
    :width: 720
    :align: center
 
-Общие сведения
------------------
+
 Геоскан Gemini – это беспилотный аэрофотосъемочный комплекс на базе квадрокоптера. Он предназначен для получения высококачественных геопривязанных фотографий местности и отдельных объектов.
 
 
@@ -165,20 +160,3 @@
 .. attention:: Для хранения аккумуляторных батарей переведите их в состояние “Storage” с помощью зарядного устройства. Подробнее в разделе :doc:`charger`.
 
 
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Содержание:
-
-   reference
-   precautions
-   charger
-   planner
-   launch
-   
-
-
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
